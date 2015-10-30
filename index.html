@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="Mr Blue Shirt" content="Mr, mister, blue, shirt, movie, film, actor, producer, character, MBS, Inspiration, The Inspiration, Mr., Mr. Blue Shirt: The Inspiration, Mr. Blue Shirt, Mr Blue Shirt, Revelation, index, home, html, page, main, scene, , picture, video, movie maker">
+	<title>MBS Home</title>
+	<link rel="shortcut icon" type="image/png" href="images/MBSFavicon.png" />
+	<link rel="stylesheet" href="style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			//jquery manipulation
+			var current;
+			//start with all images but the first hidden
+			$('img.slideshow:first').addClass('active').siblings().hide();
+
+			//function to handle switching of slideshows
+			function slideSwitch() {
+				//set current equal to the image you are currently on
+    			current = $('img.slideshow.active');
+
+    			//check if you are on the last image, then go back to the first if so
+    			if (!current.next().length) {
+    				var nextSlide = $('img.slideshow:first');
+    			}else{
+    				var nextSlide = current.next(); 
+    			}
+    			   
+    			//add a class of active to the next slide and remove active from the current
+    			nextSlide.addClass('active');
+    			current.removeClass('active');
+ 				nextSlide.fadeIn(2000);
+    			current.fadeOut(2000);
+			}
+
+			//have the slideshow switch images every 5 seconds
+    		setInterval(function(){
+    			slideSwitch()
+    		}, 6000);
+		});
+	</script>
+</head>
+<body>
+	<div class="headnav">
+		<div class="maintitle">
+			<p>Welcome to the Blue Shirt Universe!</p>
+		</div>
+		<div class="header">
+			<div class="mainnav">
+				<nav>
+					<ul>
+						<!--<li><a class="selected" href="index.html">Home</a></li><li><a href="vlog.html">The Vlog</a></li><li><a href="thefilms.html">The Films</a></li><li><a href="characters.html">Characters</a></li><li><a href="upcomingevents.html">Upcoming Events</a></li><li><a href="gallery.html">The Gallery</a></li><li><a href="jukebox.html">The Jukebox</a></li><li><a href="contact.html">Contact Me</a></li>-->
+						<li><a class="selected" href="index.html">Home</a></li>
+						<li><a href="thefilms.html">Films</a></li>
+						<li><a href="characters.html">Characters</a></li>
+						<li><a href="vlog.html">Vlog</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="jukebox.html">Jukebox</a></li>
+						<li><a href="upcomingevents.html">Events</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="SocialMedia">
+					<a href="https://www.blogger.com/profile/00811400487531683849"><img id="blogger" src="images/blogger.png" alt="Blogger" /></a>
+					<a href="https://twitter.com/Mrblueshirt"><img id="twitter" src="images/twittericon.png" alt="Twitter" /></a>
+					<a href="https://www.facebook.com/MrBlueShirtInspiration"><img id="Facebook" src="images/facebookicon.png" alt="Facebook" /></a>
+					<a href="http://www.youtube.com/FlagpoleYO"><img id="Youtube" src="images/youtubeicon.png" alt="Youtube" /></a>
+					<a href="http://www.imdb.com/title/tt2980556/"><img id="imdb" src="images/imdbicon2.png" alt="IMDB" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<img src="images/bluedown.png" alt="Mr. Blue Shirt Footer Picture" class="StewDown" />
+	<div class="allcontent">
+		<div class="slideshowtop">
+			<h1 class="maindetail">You've entered the Blue Shirt Universe!</h1> 
+			<h1 class="maindetail">Be sure to check out The Vlog for the latest updates from the producer of the film!</h1>
+		</div>
+		<div class="content">
+			<!-- Old Shots -->
+			<img src="slideshow/MBS3Logo.jpg" alt="MBS Logo" class="slideshow" />
+			<!--<img src="slideshow/ZeromonMighty.jpg" alt="Zeromon the Mighty" class="slideshow" />
+			<img src="slideshow/BloodyWoman.jpg" alt="Bloody Woman" class="slideshow" />
+			<img src="slideshow/CrawlingUnderSkin.jpg" alt="Crawling Under Skin" class="slideshow" />
+			<img src="slideshow/MenInChairs.jpg" alt="Men in Chairs" class="slideshow" />
+			<img src="slideshow/Iapprove.jpg" alt="I Approve" class="slideshow" />
+			<img src="slideshow/LauraCyan.jpg" alt="Laura Cyan" class="slideshow" />
+			<img src="slideshow/DiscoverInspiration.jpg" alt="Discover Inspiration" class="slideshow" />
+			<img src="slideshow/NoelleAaron.jpg" alt="Noelle Aaron" class="slideshow" />
+			<img src="slideshow/Spies.jpg" alt="Spies" class="slideshow" />
+			<img src="slideshow/Storyteller.jpg" alt="Story Teller" class="slideshow" />
+			<img src="slideshow/BlueBlue.jpg" alt="Blue Blue" class="slideshow" />
+			<img src="slideshow/Syphilis.jpg" alt="Syphillis" class="slideshow" />
+			<img src="slideshow/ZeromonTestifies.jpg" alt="Zeromon Testifies" class="slideshow" />-->
+			
+			<!-- New Shots -->
+			<img src="slideshow/blueCU.jpg" alt="Blue CU of Eyes" class="slideshow" />
+			<img src="slideshow/pigshot.jpg" alt="Blue and Story Teller with Pigs" class="slideshow" />
+			<img src="slideshow/boys are back in town.jpg" alt="Boys are Back in Town" class="slideshow" />
+			<img src="slideshow/Flower power.jpg" alt="Flower Power" class="slideshow" />
+			<img src="slideshow/ZeromonSleeping.jpg" alt="Zeromon Sleeping" class="slideshow" />
+			<img src="slideshow/LizzyNBlue.jpg" alt="Lizzy N Blue" class="slideshow" />
+			<img src="slideshow/WelcomeToNothing.jpg" alt="Welcome to Nothing" class="slideshow" />
+			<img src="slideshow/Lime.jpg" alt="Lime" class="slideshow" />
+			<img src="slideshow/haranboommic.jpg" alt="Haran Boom Mic" class="slideshow" />
+			<img src="slideshow/Church clique.jpg" alt="Church Clique" class="slideshow" />
+			<img src="slideshow/Porohunter.jpg" alt="Porobolo Indian Hunter" class="slideshow" />
+			<img src="slideshow/tomoshot.jpg" alt="Tomo Epic Shot" class="slideshow" />
+			<img src="slideshow/bluesword.jpg" alt="Blue with Sword" class="slideshow" />
+		</div>
+	</div>
+	<!--<img src="images/blueup.png" alt="Mr. Blue Shirt Footer Picture" class="Stew" />-->
+	<footer>
+		<div class="footwrap">
+			<div class="copyright">
+				<p style="margin-top: 0px;">© 2005 - 2015 RECKONING FORCE PRODUCTIONS. All Rights Reserved.</p>
+				<audio align="center" autoplay controls loop>
+					<source src="audio/MBS Theme.wav">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+			<div class="designer">
+				<p>Website Designed by</p>
+				<a href="http://www.linkedin.com/pub/eustace-mann-jr/72/309/85/">E.J. Mann</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
